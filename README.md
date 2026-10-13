@@ -20,22 +20,4 @@
 - Better Auth with MongoDB
 - react-hot-toast and lucide-react
 
-## 🚀 Run Locally
 
-```bash
-npm install
-npm run dev
-```
-
-Create a `.env` file:
-
-```
-BETTER_AUTH_SECRET=
-BETTER_AUTH_URL=http://localhost:3000
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-MONGODB_URI=
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-```
