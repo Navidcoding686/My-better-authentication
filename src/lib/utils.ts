@@ -1,5 +1,3 @@
-
-
 export const toBengaliNumber = (
     num: number | string | undefined | null,
 ): string => {
@@ -7,18 +5,15 @@ export const toBengaliNumber = (
         return "০";
     }
     const str = num.toString();
-    // Check if string contains at least one digit; if not, return "০"
+    
     if (str.trim() === "" || !/\d/.test(str)) {
         return "০";
     }
     const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
-    // Replace every digit — commas, dots, minus signs stay intact
+    
     return str.replace(/\d/g, (d) => bengaliDigits[parseInt(d)]);
 };
-/**
- * কমা দিয়ে সংখ্যা format করে তারপর বাংলায় convert করে
- * উদাহরণ: 1850 → "১,৮৫০", 148 → "১৪৮"
- */
+
 export const formatPrice = (price: number | undefined | null): string => {
     if (price === undefined || price === null || isNaN(Number(price))) {
         return "—";

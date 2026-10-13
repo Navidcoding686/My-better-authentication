@@ -25,7 +25,7 @@ const CategoryPageClient = ({
     const [loading, setLoading] = useState(initialProducts.length === 0);
 
     useEffect(() => {
-        // If initialProducts was already passed from server, no client refetch needed
+        
         if (initialProducts.length > 0) return;
 
         let cancelled = false;
@@ -62,7 +62,7 @@ const CategoryPageClient = ({
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 min-h-[60vh]">
-            {/* Header */}
+           
             <div className="bg-white rounded-xl border border-gray-100 p-5 mb-5 flex items-center gap-4">
                 <span className="text-4xl">{category.icon}</span>
                 <div>
@@ -77,7 +77,7 @@ const CategoryPageClient = ({
                 </div>
             </div>
 
-            {/* Sort Bar */}
+          
             <div className="bg-white rounded-xl border border-gray-100 p-3 flex items-center justify-between mb-5">
                 <span className="text-sm text-gray-500">
                     {loading
@@ -106,7 +106,7 @@ const CategoryPageClient = ({
                 </div>
             </div>
 
-            {/* Loading Skeleton */}
+           
             {loading && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     {Array.from({ length: 8 }).map((_, i) => (
@@ -134,7 +134,7 @@ const CategoryPageClient = ({
                 </div>
             )}
 
-            {/* Products Grid */}
+         \
             {!loading && sortedProducts.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     {sortedProducts.map((product) => (
