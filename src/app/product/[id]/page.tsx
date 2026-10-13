@@ -59,13 +59,13 @@ const ProductDetailPage = async ({
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-8">
-            {/* Breadcrumb */}
+            
             <div className="text-sm text-gray-500 mb-4 flex items-center gap-1.5 flex-wrap">
                 <Link href="/" className="hover:text-green-600">
                     হোম
                 </Link>
                 <span>›</span>
-                {/* product.category is the API slug (sobji, dim-dui, mosla etc.) */}
+                
                 <Link
                     href={`/category/${product.category}`}
                     className="hover:text-green-600"
@@ -76,7 +76,7 @@ const ProductDetailPage = async ({
                 <span className="text-gray-800">{product.nameBn}</span>
             </div>
 
-            {/* Summary Card */}
+           
             <div className="bg-white rounded-xl border border-gray-100 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                 <div className="flex items-center gap-5">
                     <div className="text-6xl">{product.image}</div>
@@ -84,10 +84,14 @@ const ProductDetailPage = async ({
                         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
                             {product.nameBn}
                         </h1>
-                        <p className="text-sm text-gray-500 mt-1">
-                            প্রতি {translateUnit(product.unit)} ·{" "}
-                            {product.categoryNameBn}
-                        </p>
+                                                <div className="flex flex-wrap items-center gap-2 mt-2">
+                            <span className="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full">
+                                {product.categoryNameBn}
+                            </span>
+                            <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full">
+                                প্রতি {translateUnit(product.unit)}
+                            </span>
+                        </div>
                         <p className="text-sm text-gray-500 mt-1">
                             গতকালের তুলনায় আজ দাম{" "}
                             <span className={getChangeColor(dir)}>
