@@ -41,27 +41,27 @@ export interface Category {
 }
 
 async function fetcher<T>(endpoint: string): Promise<T | null> {
-    // Try primary URL first
+    
     try {
         const res = await fetch(`${BASE_URL}${endpoint}`, {
             cache: "no-store",
         });
         if (res.ok) return await res.json();
     } catch {
-        // Fall through to alternate
+        
     }
 
-    // Fallback to alternate URL
+    
     try {
         const res2 = await fetch(`${ALT_BASE_URL}${endpoint}`, {
             cache: "no-store",
         });
         if (res2.ok) return await res2.json();
     } catch {
-        // Fall through
+        
     }
 
-    // Remote API offline or unavailable
+    
     return null;
 }
 
@@ -79,7 +79,7 @@ export async function getProductsByCategory(
     if (data && Array.isArray(data) && data.length > 0) {
         return data;
     }
-    // Fallback: If /products?category=... is not returning items, filter from /products
+    
     const all = await getAllProducts();
     return all.filter((p) => p.category === category);
 }
@@ -89,7 +89,7 @@ export async function getSingleProduct(
 ): Promise<Product | null> {
     const data = await fetcher<Product>(`/products/${idOrSlug}`);
     if (data && data.id) return data;
-    // Fallback: search across all products by ID or slug
+    
     const all = await getAllProducts();
     return (
         all.find((p) => p.id.toString() === idOrSlug || p.slug === idOrSlug) ||
