@@ -33,8 +33,8 @@ export const formatPercent = (percent: number | undefined | null): string => {
 
 
 export const getChangeColor = (type: "up" | "down" | "flat"): string => {
-    if (type === "up") return "text-red-500";
-    if (type === "down") return "text-green-500";
+    if (type === "up") return "text-green-600";
+    if (type === "down") return "text-red-500";
     return "text-gray-400";
 };
 
@@ -47,8 +47,8 @@ export const getChangeIcon = (type: "up" | "down" | "flat"): string => {
 
 
 export const getChangeBg = (type: "up" | "down" | "flat"): string => {
-    if (type === "up") return "bg-red-50";
-    if (type === "down") return "bg-green-50";
+    if (type === "up") return "bg-green-50";
+    if (type === "down") return "bg-red-50";
     return "bg-gray-50";
 };
 

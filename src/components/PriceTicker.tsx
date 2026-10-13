@@ -47,9 +47,9 @@ const PriceTicker = () => {
                     const pct = product.change?.pct ?? 0;
                     const colorClass =
                         dir === "up"
-                            ? "text-red-500"
+                            ? "text-green-600"
                             : dir === "down"
-                              ? "text-green-500"
+                              ? "text-red-500"
                               : "text-gray-400";
                     const icon =
                         dir === "up" ? "▲" : dir === "down" ? "▼" : "—";
