@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import CategoryPageClient from "@/components/CategoryPageClient";
 import type { Category } from "@/lib/api";
 
-// Slugs here match the URL pattern; apiFilter must match actual API category values
-// API category values: chal, dal, tel, sobji, mach, mangsho, dim-dui, mosla
+
 const CATEGORY_INFO: Record<
     string,
     { nameBn: string; icon: string; apiFilter: string }

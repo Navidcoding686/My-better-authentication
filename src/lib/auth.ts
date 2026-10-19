@@ -35,6 +35,10 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
 
 export const auth = betterAuth({
     database: mongodbAdapter(db, { client }),
+    trustedOrigins: [
+        process.env.BETTER_AUTH_URL || "http://localhost:3000",
+        "https://*.vercel.app",
+    ],
     emailAndPassword: {
         enabled: true,
         minPasswordLength: 8,

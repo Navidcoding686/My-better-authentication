@@ -60,9 +60,8 @@ const SignUpPage = () => {
                 setErrorMsg(msg);
                 toast.error(msg);
             } else {
-                toast.success("স্বাগতম! অ্যাকাউন্ট তৈরি হয়েছে।");
-                router.push("/");
-                router.refresh();
+                toast.success("অ্যাকাউন্ট তৈরি হয়েছে! এখন সাইন ইন করুন।");
+                router.push("/signin");
             }
         } catch (err: unknown) {
             const msg =
@@ -99,7 +98,7 @@ const SignUpPage = () => {
     return (
         <div className="min-h-[calc(100vh-140px)] flex items-center justify-center px-4 py-10 bg-linear-to-b from-emerald-50/40 via-white to-gray-50/60">
             <div className="w-full max-w-md">
-                {/* Back Link */}
+               
                 <div className="mb-4">
                     <Link
                         href="/"
@@ -110,7 +109,7 @@ const SignUpPage = () => {
                     </Link>
                 </div>
 
-                {/* Card Container */}
+                
                 <div className="bg-white rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100 p-8 sm:p-10 relative overflow-hidden">
                     {/* Top Decorative Header */}
                     <div className="text-center mb-7">
@@ -134,7 +133,7 @@ const SignUpPage = () => {
                         </p>
                     </div>
 
-                    {/* Inline Error Message */}
+                    
                     {errorMsg && (
                         <div className="mb-5 p-3.5 bg-red-50/90 border border-red-200 text-red-600 rounded-xl text-xs flex items-start gap-2 animate-in fade-in duration-200">
                             <span className="shrink-0 font-bold text-sm leading-none mt-0.5">
@@ -144,9 +143,9 @@ const SignUpPage = () => {
                         </div>
                     )}
 
-                    {/* Form */}
+                  
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        {/* Name */}
+                        
                         <div>
                             <label className="text-xs font-semibold text-gray-700 block mb-1.5">
                                 আপনার নাম (Name)
@@ -165,7 +164,7 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
-                        {/* Email */}
+                       
                         <div>
                             <label className="text-xs font-semibold text-gray-700 block mb-1.5">
                                 ইমেইল ঠিকানা
@@ -183,7 +182,7 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
-                        {/* Password */}
+                       
                         <div>
                             <div className="flex items-center justify-between mb-1.5">
                                 <label className="text-xs font-semibold text-gray-700">
@@ -223,7 +222,7 @@ const SignUpPage = () => {
                             </div>
                         </div>
 
-                        {/* Register Button */}
+                       
                         <button
                             type="submit"
                             disabled={loading}
@@ -240,7 +239,7 @@ const SignUpPage = () => {
                         </button>
                     </form>
 
-                    {/* Divider */}
+                    
                     <div className="flex items-center my-6">
                         <div className="flex-1 h-px bg-gray-100"></div>
                         <span className="px-3 text-xs text-gray-400 font-medium">
@@ -249,7 +248,7 @@ const SignUpPage = () => {
                         <div className="flex-1 h-px bg-gray-100"></div>
                     </div>
 
-                    {/* Social Buttons */}
+                    
                     <div className="grid grid-cols-2 gap-3">
                         <button
                             type="button"
@@ -295,7 +294,7 @@ const SignUpPage = () => {
                         </button>
                     </div>
 
-                    {/* Footer Toggle */}
+                   
                     <div className="mt-8 text-center text-xs text-gray-500">
                         ইতিমধ্যে অ্যাকাউন্ট আছে?{" "}
                         <Link

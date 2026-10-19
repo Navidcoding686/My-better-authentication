@@ -47,20 +47,20 @@ const Navbar = () => {
 
     return (
         <header className="bg-white shadow-sm sticky top-0 z-50 transform-gpu">
-            {/* Top Row: Logo + Auth */}
+          
             <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                {/* Logo */}
+           
                 <Link
                     href="/"
                     aria-label="বাজার দর - হোম পেজ"
                     className="group inline-flex items-center gap-3 rounded-xl outline-none transition-opacity duration-200 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-4"
                 >
-                    {/* Logo Icon */}
+                    
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-green-500 to-green-700 text-2xl shadow-sm transition-transform duration-200 group-hover:scale-105">
                         <span aria-hidden="true">🛒</span>
                     </div>
 
-                    {/* Brand Information */}
+                    
                     <div className="flex flex-col">
                         <h1 className="text-lg font-extrabold leading-tight tracking-tight text-gray-900 transition-colors duration-200 group-hover:text-green-700 sm:text-xl">
                             বাজার দর
@@ -72,7 +72,7 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                {/* Desktop Auth */}
+               
                 <div className="hidden md:flex items-center gap-3">
                     {session ? (
                         <div className="relative">
