@@ -98,7 +98,7 @@ const Navbar = () => {
                                 </span>
                             </button>
 
-                            {/* Dropdown */}
+                         
                             {userMenuOpen && (
                                 <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-lg p-2 z-50">
                                     <div className="px-3 py-2 border-b border-gray-100">
@@ -144,7 +144,6 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/* Mobile Menu Toggle */}
                 <button
                     className="md:hidden p-2"
                     onClick={() => setMobileOpen(!mobileOpen)}
@@ -158,7 +157,7 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Category Links Row (Desktop) */}
+            
             <nav className="hidden md:block bg-gray-50 border-t border-gray-100">
                 <div className="max-w-6xl mx-auto px-4 flex items-center gap-1 overflow-x-auto py-2 scrollbar-hide">
                     {categories.map((cat) => {
@@ -182,7 +181,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
+         
             {mobileOpen && (
                 <div className="md:hidden border-t border-gray-100 bg-white">
                     {/* Category links */}
@@ -209,7 +208,7 @@ const Navbar = () => {
                         })}
                     </div>
 
-                    {/* Auth buttons */}
+                   
                     <div className="border-t border-gray-100 px-4 py-3">
                         {session ? (
                             <div className="space-y-2">

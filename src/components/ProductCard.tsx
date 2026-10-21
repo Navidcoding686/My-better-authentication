@@ -21,7 +21,7 @@ const ProductCard = ({ product }: Props) => {
             href={`/product/${product.id}`}
             className="bg-white rounded-xl border border-gray-100 p-4 hover:shadow-md hover:border-green-100 transition-shadow duration-200 block"
         >
-            {/* Emoji + Change badge */}
+          
             <div className="flex items-start justify-between">
                 <div className="text-4xl">{product.image}</div>
                 <span
@@ -34,7 +34,7 @@ const ProductCard = ({ product }: Props) => {
                 </span>
             </div>
 
-            {/* Name + Unit */}
+            
             <h3 className="font-semibold text-gray-800 mt-3 leading-tight">
                 {product.nameBn}
             </h3>
@@ -42,7 +42,7 @@ const ProductCard = ({ product }: Props) => {
                 প্রতি {translateUnit(product.unit)}
             </p>
 
-            {/* Price */}
+            
             <div className="mt-3">
                 <p className="text-xs text-gray-500">আজকের দাম</p>
                 <p className="text-xl font-bold text-gray-800">
